@@ -8,17 +8,44 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <title>Weather</title>
+    <title>Weather Center</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   </head>
   <body>
-    <h1>Weather App.</h1>
+    <h1 class="text-center">Weather App</h1>
     <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="btnGet">Get Weather</button>
+  <input id="zipInput" type="text" class="form-control" placeholder="Enter Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="submit" id="sendButton">Get weather</button>
 </div>
+<div class="card border text-center style="width: 18rem;">
+  <div class="card-header">
+    City
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="City">Lexington</li>
+  </ul>
+  </div>
+  <div class="card border text-center style="width: 18rem;">
+  <div class="card-header">
+   Temperature 
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="temp" id="temp"></li>
+  </ul>
+  </div>
+  <div class="card border text-center style="width: 18rem;">
+  <div class="card-header">
+   Conditions 
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="cxon" id="cxon"></li>
+  </ul>
+  </div>
+  <h2 id="con"></h2>
 
     <!-- Optional JavaScript; choose one of the two! -->
-
+  <script src="/weather/js/main.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
