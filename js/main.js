@@ -1,7 +1,7 @@
 let zipInput = '';
 const url= 'https://api.openweathermap.org/data/2.5/weather?zip=40513&appid=39f71d4438befcf9779a7ef59013d16a';
-
 document.getElementById('sendButton').addEventListener('click',makeGetRequest);
+// document.getElementById("hidden").style.display = "none";
 function makeGetRequest() {
     let zipInput = document.getElementById('zipInput').value;
     axios.get(url.replace('40513',zipInput))
@@ -19,6 +19,10 @@ function makeGetRequest() {
                 function ktoC(temp){
                     return (temp-273.15);
                 };
+                 document.getElementById("hidden").onclick = function() {
+  
+  
+        }
                 document.getElementById("con").innerText=`Current coditions are ${result.weather[0].main}`;
                 document.getElementById("city").innerText=`${result.name}`;
                 document.getElementById('tempK').innerText=`${k}(K)`;
